@@ -1,0 +1,97 @@
+{
+  "name": "Incident",
+  "fields": [
+    {
+      "fieldName": "incidentAddress",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "IncidentStatus",
+      "fieldValues": "PENDING,RESOLVED,UNRESOLVED",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "reportedOn",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "reportedBy",
+      "fieldType": "String",
+      "javadoc": "Email of reported by user from account service",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updatedOn",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String",
+      "javadoc": "Email of user from account service"
+    },
+    {
+      "fieldName": "resolvedOn",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "reportingComments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updateStatusComments",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "champion",
+      "otherEntityRelationshipName": "incident",
+      "relationshipName": "champion",
+      "otherEntityField": "maxChampionId"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "fieldAgent",
+      "otherEntityRelationshipName": "incident",
+      "relationshipName": "fieldAgent",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "incidentType",
+      "otherEntityRelationshipName": "incident",
+      "relationshipName": "incidentType",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "champion",
+      "otherEntityRelationshipName": "incident",
+      "relationshipName": "champion",
+      "otherEntityField": "maxChampionId"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "fieldAgent",
+      "otherEntityRelationshipName": "incident",
+      "relationshipName": "fieldAgent",
+      "otherEntityField": "id"
+    }
+  ],
+  "javadoc": "champion, FieldAgent, incident has relation.",
+  "entityTableName": "incident",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["champion"],
+  "databaseType": "sql",
+  "changelogDate": "20220302135258"
+}

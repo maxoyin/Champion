@@ -1,0 +1,30 @@
+{
+  "championApp": {
+    "workshift": {
+      "home": {
+        "title": "Workshifts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Workshift",
+        "createOrEditLabel": "Create or edit a Workshift",
+        "notFound": "No Workshifts found"
+      },
+      "created": "A new Workshift is created with identifier {{ param }}",
+      "updated": "A Workshift is updated with identifier {{ param }}",
+      "deleted": "A Workshift is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Workshift {{ id }}?"
+      },
+      "detail": {
+        "title": "Workshift"
+      },
+      "id": "ID",
+      "code": "Code",
+      "displayName": "Display Name",
+      "startTime": "Start Time",
+      "duration": "Duration",
+      "help": {
+        "code": "Values will be Morning, Afternoon and Evening"
+      }
+    }
+  }
+}

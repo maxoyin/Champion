@@ -1,0 +1,41 @@
+{
+  "championApp": {
+    "incident": {
+      "home": {
+        "title": "Incidents",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Incident",
+        "createOrEditLabel": "Create or edit a Incident",
+        "notFound": "No Incidents found"
+      },
+      "created": "A new Incident is created with identifier {{ param }}",
+      "updated": "A Incident is updated with identifier {{ param }}",
+      "deleted": "A Incident is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Incident {{ id }}?"
+      },
+      "detail": {
+        "title": "Incident"
+      },
+      "id": "ID",
+      "incidentAddress": "Incident Address",
+      "status": "Status",
+      "reportedOn": "Reported On",
+      "reportedBy": "Reported By",
+      "updatedOn": "Updated On",
+      "updatedBy": "Updated By",
+      "resolvedOn": "Resolved On",
+      "reportingComments": "Reporting Comments",
+      "updateStatusComments": "Update Status Comments",
+      "champion": "Champion",
+      "fieldAgent": "Field Agent",
+      "incidentType": "Incident Type",
+      "champion": "Champion",
+      "fieldAgent": "Field Agent",
+      "help": {
+        "reportedBy": "Email of reported by user from account service",
+        "updatedBy": "Email of user from account service"
+      }
+    }
+  }
+}

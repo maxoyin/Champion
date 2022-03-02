@@ -1,0 +1,61 @@
+{
+  "name": "WebNotification",
+  "fields": [
+    {
+      "fieldName": "status",
+      "fieldType": "WebNotificationStatus",
+      "fieldValues": "PENDING,COMPLETED",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "requestPayload",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedOn",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String",
+      "javadoc": "Email of user from account service"
+    },
+    {
+      "fieldName": "closedOn",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "closedBy",
+      "fieldType": "String",
+      "javadoc": "Email of user from account service"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "webNotificationType",
+      "otherEntityRelationshipName": "webNotification",
+      "relationshipName": "webNotificationType",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "champion",
+      "otherEntityRelationshipName": "webNotification",
+      "relationshipName": "champion",
+      "otherEntityField": "maxChampionId"
+    }
+  ],
+  "javadoc": "notificationType, Champion is relation",
+  "entityTableName": "web_notification",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["champion"],
+  "databaseType": "sql",
+  "changelogDate": "20220302135358"
+}

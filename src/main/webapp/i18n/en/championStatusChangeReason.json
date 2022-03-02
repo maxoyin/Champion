@@ -1,0 +1,25 @@
+{
+  "championApp": {
+    "championStatusChangeReason": {
+      "home": {
+        "title": "Champion Status Change Reasons",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Champion Status Change Reason",
+        "createOrEditLabel": "Create or edit a Champion Status Change Reason",
+        "notFound": "No Champion Status Change Reasons found"
+      },
+      "created": "A new Champion Status Change Reason is created with identifier {{ param }}",
+      "updated": "A Champion Status Change Reason is updated with identifier {{ param }}",
+      "deleted": "A Champion Status Change Reason is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Champion Status Change Reason {{ id }}?"
+      },
+      "detail": {
+        "title": "Champion Status Change Reason"
+      },
+      "id": "ID",
+      "reason": "Reason",
+      "reasonForChampionStatus": "Reason For Champion Status"
+    }
+  }
+}

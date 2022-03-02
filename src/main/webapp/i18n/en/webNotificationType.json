@@ -1,0 +1,33 @@
+{
+  "championApp": {
+    "webNotificationType": {
+      "home": {
+        "title": "Web Notification Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Web Notification Type",
+        "createOrEditLabel": "Create or edit a Web Notification Type",
+        "notFound": "No Web Notification Types found"
+      },
+      "created": "A new Web Notification Type is created with identifier {{ param }}",
+      "updated": "A Web Notification Type is updated with identifier {{ param }}",
+      "deleted": "A Web Notification Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Web Notification Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Web Notification Type"
+      },
+      "id": "ID",
+      "type": "Type",
+      "displayName": "Display Name",
+      "oneLinerNote": "One Liner Note",
+      "detailedNote": "Detailed Note",
+      "help": {
+        "type": "Current set of valid values are churn_request, contract_paused",
+        "displayName": "Current set of valid values are Churn request, Contract Pause",
+        "oneLinerNote": "Display text below type pf request. Example Contract has been paused from LAMS",
+        "detailedNote": "Note that is displayed when notification detail screen is opened"
+      }
+    }
+  }
+}

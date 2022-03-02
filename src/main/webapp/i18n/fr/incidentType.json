@@ -1,0 +1,25 @@
+{
+  "championApp": {
+    "incidentType": {
+      "home": {
+        "title": "IncidentTypes",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Incident Type",
+        "createOrEditLabel": "Créer ou éditer un Incident Type",
+        "notFound": "Aucun Incident Type trouvé"
+      },
+      "created": "Un nouveau Incident Type a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Incident Type avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Incident Type avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Incident Type {{ id }} ?"
+      },
+      "detail": {
+        "title": "Incident Type"
+      },
+      "id": "ID",
+      "incidentTypeCode": "Incident Type Code",
+      "incidentTypeDisplayName": "Incident Type Display Name"
+    }
+  }
+}

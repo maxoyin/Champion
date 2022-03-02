@@ -1,0 +1,54 @@
+{
+  "name": "FieldAgent",
+  "fields": [
+    {
+      "fieldName": "accountId",
+      "fieldType": "String",
+      "javadoc": "Email of agent",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "cityId",
+      "fieldType": "String",
+      "javadoc": "Shared resource",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "stateId",
+      "fieldType": "String",
+      "javadoc": "Shared resource",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updatedOn",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "incident",
+      "otherEntityRelationshipName": "fieldAgent",
+      "relationshipName": "incident"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "workshift",
+      "otherEntityRelationshipName": "fieldAgent",
+      "relationshipName": "workshift",
+      "otherEntityField": "id"
+    }
+  ],
+  "javadoc": "Workshift is many to one",
+  "entityTableName": "field_agent",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["champion"],
+  "databaseType": "sql",
+  "changelogDate": "20220302135158"
+}

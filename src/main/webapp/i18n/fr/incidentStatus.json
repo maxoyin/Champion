@@ -1,0 +1,10 @@
+{
+  "championApp": {
+    "IncidentStatus": {
+      "null": "",
+      "PENDING": "PENDING",
+      "RESOLVED": "RESOLVED",
+      "UNRESOLVED": "UNRESOLVED"
+    }
+  }
+}

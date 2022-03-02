@@ -1,0 +1,9 @@
+{
+  "championApp": {
+    "GuarantorsStatus": {
+      "null": "",
+      "ACTIVE": "ACTIVE",
+      "INACTIVE": "INACTIVE"
+    }
+  }
+}

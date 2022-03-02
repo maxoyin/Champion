@@ -1,0 +1,34 @@
+{
+  "championApp": {
+    "championStatusHistory": {
+      "home": {
+        "title": "ChampionStatusHistories",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Champion Status History",
+        "createOrEditLabel": "Créer ou éditer un Champion Status History",
+        "notFound": "Aucun Champion Status History trouvé"
+      },
+      "created": "Un nouveau Champion Status History a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Champion Status History avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Champion Status History avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Champion Status History {{ id }} ?"
+      },
+      "detail": {
+        "title": "Champion Status History"
+      },
+      "id": "ID",
+      "status": "Status",
+      "statusEndedOn": "Status Ended On",
+      "comments": "Comments",
+      "inactiveStartDate": "Inactive Start Date",
+      "inactiveEndDate": "Inactive End Date",
+      "championStatusChangeReason": "Champion Status Change Reason",
+      "champion": "Champion",
+      "help": {
+        "inactiveStartDate": "Start of Inactive days captured when status changed to inactive",
+        "inactiveEndDate": "End of Inactive days captured when status changed to inactive"
+      }
+    }
+  }
+}

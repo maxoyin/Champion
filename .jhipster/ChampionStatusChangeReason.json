@@ -1,0 +1,29 @@
+{
+  "name": "ChampionStatusChangeReason",
+  "fields": [
+    {
+      "fieldName": "reason",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "reasonForChampionStatus",
+      "fieldType": "ChampionStatus",
+      "fieldValues": "ACTIVE,INACTIVE,CHURNED,DEACTIVATED,HPCOMPLETE",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [],
+  "javadoc": "This entity holds master data of reasons that needs to be captured when champion status is changed",
+  "entityTableName": "champion_status_change_reason",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["champion"],
+  "databaseType": "sql",
+  "changelogDate": "20220302135558"
+}

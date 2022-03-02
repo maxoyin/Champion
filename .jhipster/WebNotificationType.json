@@ -1,0 +1,41 @@
+{
+  "name": "WebNotificationType",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "String",
+      "javadoc": "Current set of valid values are churn_request, contract_paused",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "displayName",
+      "fieldType": "String",
+      "javadoc": "Current set of valid values are Churn request, Contract Pause",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "oneLinerNote",
+      "fieldType": "String",
+      "javadoc": "Display text below type pf request. Example Contract has been paused from LAMS",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "detailedNote",
+      "fieldType": "String",
+      "javadoc": "Note that is displayed when notification detail screen is opened",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "web_notification_type",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["champion"],
+  "databaseType": "sql",
+  "changelogDate": "20220302135458"
+}

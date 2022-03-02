@@ -1,0 +1,240 @@
+{
+  "name": "Champion",
+  "fields": [
+    {
+      "fieldName": "maxChampionId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "prospectiveId",
+      "fieldType": "String",
+      "javadoc": "generated Prospect Id eg. MAX-ID-534",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "account",
+      "fieldType": "String",
+      "javadoc": "Unique email for the user from account service",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "middleName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "ChampionStatus",
+      "fieldValues": "ACTIVE,INACTIVE,CHURNED,DEACTIVATED,HPCOMPLETE",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "emailAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hasInsurance",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "hasDriverLicense",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "activatedOn",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updatedOn",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "welfareAnalyst",
+      "fieldType": "String",
+      "javadoc": "Email of welfare analyst will be stored"
+    },
+    {
+      "fieldName": "maritalStatus",
+      "fieldType": "MaritalStatus",
+      "fieldValues": "SINGLE,MARRIED,DIVORCED,WIDOWED"
+    },
+    {
+      "fieldName": "stateOfOrigin",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "stateOfBirth",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bankName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bankAccountNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bankAccountName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "neatOfKinName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nextOfKinPhone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateOfBirth",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "bvn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "houseAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "emergencyContactName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "emergencyContactNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "entryChannel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hmoProvider",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hmoNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "metaJson",
+      "fieldType": "byte[]",
+      "javadoc": "Check if following properties still needed for Champion",
+      "fieldTypeBlobContent": "any"
+    },
+    {
+      "fieldName": "dateEngaged",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateDisengaged",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "rating",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "helmetNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "registrationNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneBrand",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneImeNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contractorId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "serviceId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "packageId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deliveryServiceId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "statusId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "reasonId",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "championStatusHistory",
+      "otherEntityRelationshipName": "champion",
+      "relationshipName": "championStatusHistory"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "championGuarantor",
+      "otherEntityRelationshipName": "champion",
+      "relationshipName": "championGuarantor"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "incident",
+      "otherEntityRelationshipName": "champion",
+      "relationshipName": "incident"
+    }
+  ],
+  "entityTableName": "champion",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["champion"],
+  "databaseType": "sql",
+  "changelogDate": "20220302134858"
+}

@@ -1,0 +1,228 @@
+
+application {
+  config {
+    packageName ng.com.max
+    baseName champion
+    applicationType gateway
+    authenticationType jwt
+    clientFramework react
+    databaseType sql
+    serverPort 8084
+    devDatabaseType postgresql
+    dtoSuffix DTO
+    enableSwaggerCodegen true
+    entitySuffix Entity
+    languages [en, fr]
+    messageBroker kafka
+    nativeLanguage en
+    prodDatabaseType postgresql
+    serviceDiscoveryType eureka
+    testFrameworks [protractor, cucumber, gatling]
+
+  }
+  entities *
+}
+
+
+
+enum ChampionStatus {
+    ACTIVE
+    INACTIVE
+    CHURNED
+    DEACTIVATED
+    HPCOMPLETE
+}
+
+enum MaritalStatus {
+    SINGLE
+    MARRIED
+    DIVORCED
+    WIDOWED
+}
+
+enum GuarantorsStatus { 
+    ACTIVE 
+    INACTIVE
+}
+
+enum IncidentStatus { 
+    PENDING
+    RESOLVED
+    UNRESOLVED
+}
+
+enum WebNotificationStatus {
+    PENDING
+    COMPLETED
+}
+
+/** Events  **/
+enum ChampionEvent { 
+    ChampionStatusChanged
+    VehicleDisengaged
+    VehicleAssigned
+}
+
+entity Champion {
+    maxChampionId String required,
+    /** generated Prospect Id eg. MAX-ID-534*/
+    prospectiveId String required,
+    /** Unique email for the user from account service*/
+    account String required,
+    firstName String required,
+    lastName String required,
+    middleName String,
+    phoneNumber String required,
+    status ChampionStatus required,
+    city String required,
+    emailAddress String,
+    hasInsurance Boolean required,
+    hasDriverLicense Boolean required,
+    createdOn LocalDate required,
+    activatedOn LocalDate required,
+    updatedOn LocalDate required,
+    /** Email of welfare analyst will be stored*/
+    welfareAnalyst String,
+    maritalStatus MaritalStatus,
+    stateOfOrigin String,
+    stateOfBirth String,
+    bankName String,
+    bankAccountNumber String,
+    bankAccountName String,
+    neatOfKinName String,
+    nextOfKinPhone String,
+    dateOfBirth LocalDate,
+    bvn String,
+    houseAddress String,
+    emergencyContactName String,
+    emergencyContactNumber String,
+    entryChannel String,
+    hmoProvider String,
+    hmoNumber String,
+    
+    /** Check if following properties still needed for Champion*/
+    metaJson Blob,
+    dateEngaged LocalDate,
+    dateDisengaged LocalDate,
+    rating Integer,
+    helmetNumber String,
+    registrationNumber String,
+    phoneBrand String,
+    phoneImeNumber String,
+    contractorId String,
+    serviceId String,
+    packageId String,
+    deliveryServiceId String,
+    statusId String,
+    reasonId String  
+}
+
+/** Reason is in many to one mapping*/
+entity ChampionStatusHistory{
+    status ChampionStatus required,
+    statusEndedOn LocalDate,
+    comments String,
+    /** Start of Inactive days captured when status changed to inactive*/
+    inactiveStartDate LocalDate,
+    /** End of Inactive days captured when status changed to inactive*/
+    inactiveEndDate LocalDate
+}
+
+entity ChampionGuarantor{
+    firstName String required,
+    lastName String required,
+    phoneNumber String required,
+    address String required,
+    status GuarantorsStatus required,
+    occupation String,
+    updatedOn LocalDate,
+}
+
+/** Workshift is many to one*/
+entity FieldAgent{
+	/** Email of agent*/
+    accountId String required,
+    /** Shared resource*/
+    cityId String required,
+    /** Shared resource*/
+    stateId String required,
+    updatedOn LocalDate
+}
+
+/** champion, FieldAgent, incident has relation. */
+entity Incident{
+    incidentAddress String required,
+    status IncidentStatus required,
+    reportedOn LocalDate required,
+    /** Email of reported by user from account service*/
+    reportedBy String required,
+    updatedOn LocalDate,
+    /** Email of user from account service*/
+    updatedBy String,
+    resolvedOn LocalDate,
+    reportingComments String,
+    updateStatusComments String
+}
+
+/** notificationType, Champion is relation*/
+entity WebNotification{
+    status WebNotificationStatus required,
+    requestPayload String,
+    updatedOn LocalDate,
+    /** Email of user from account service*/
+    updatedBy String,
+    closedOn LocalDate,
+    /** Email of user from account service*/
+    closedBy String
+}
+
+entity WebNotificationType{
+    /** Current set of valid values are churn_request, contract_paused*/
+    type String required,
+    /** Current set of valid values are Churn request, Contract Pause*/
+    displayName String required,
+    /** Display text below type pf request. Example Contract has been paused from LAMS */
+    oneLinerNote String required,
+    /** Note that is displayed when notification detail screen is opened*/
+    detailedNote String required
+}
+
+
+/** This entity holds master data of reasons that needs to be captured when champion status is changed*/
+entity ChampionStatusChangeReason{
+    reason String required,
+    reasonForChampionStatus ChampionStatus required
+}
+
+entity IncidentType{
+    incidentTypeCode String required,
+    incidentTypeDisplayName String required
+}
+
+entity Workshift{
+    /** Values will be Morning, Afternoon and Evening*/
+    code String required,
+    displayName String required,
+    startTime String required,
+    duration Integer required
+}
+
+relationship OneToMany {
+  Champion to ChampionStatusHistory{champion(maxChampionId)},
+  Champion to ChampionGuarantor{champion(maxChampionId)},
+  Champion to Incident{champion(maxChampionId)},
+  FieldAgent to Incident{fieldAgent(id)}
+}
+
+relationship ManyToOne {
+    ChampionStatusHistory{ChampionStatusChangeReason(id)} to ChampionStatusChangeReason,
+    FieldAgent{Workshift(id)} to Workshift,
+    Incident{Champion(maxChampionId)} to Champion,
+    Incident{FieldAgent(id)} to FieldAgent,
+    Incident{IncidentType(id)} to IncidentType,
+    WebNotification{WebNotificationType(id)} to WebNotificationType,
+    WebNotification{Champion(maxChampionId)} to Champion
+}
+
+
+    

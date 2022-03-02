@@ -1,0 +1,68 @@
+{
+  "generator-jhipster": {
+    "authenticationType": "jwt",
+    "clientFramework": "react",
+    "serverPort": "8084",
+    "serviceDiscoveryType": "eureka",
+    "skipUserManagement": false,
+    "withAdminUi": true,
+    "baseName": "champion",
+    "buildTool": "maven",
+    "databaseType": "sql",
+    "devDatabaseType": "sqlite",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "enableSwaggerCodegen": true,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": ["en", "fr"],
+    "messageBroker": "kafka",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "skipClient": false,
+    "testFrameworks": ["protractor", "cucumber", "gatling"],
+    "websocket": false,
+    "packageName": "com.jhipster.node",
+    "packageFolder": "ng/com/max",
+    "applicationType": "gateway",
+    "dtoSuffix": "DTO",
+    "entitySuffix": "Entity",
+    "nativeLanguage": "en",
+    "jhipsterVersion": "7.0.1",
+    "skipServer": false,
+    "clientPackageManager": "npm",
+    "reactive": true,
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "entities": [
+      "Champion",
+      "ChampionStatusHistory",
+      "ChampionGuarantor",
+      "FieldAgent",
+      "Incident",
+      "WebNotification",
+      "WebNotificationType",
+      "ChampionStatusChangeReason",
+      "IncidentType",
+      "Workshift"
+    ],
+    "skipCheckLengthOfIdentifier": false,
+    "skipFakeData": false,
+    "blueprints": [
+      {
+        "name": "generator-jhipster-nodejs",
+        "version": "2.0.0"
+      }
+    ],
+    "otherModules": [
+      {
+        "name": "generator-jhipster-nodejs",
+        "version": "2.0.0"
+      }
+    ],
+    "pages": [],
+    "creationTimestamp": 1646228878495,
+    "jwtSecretKey": "ZjYyY2I4ZTUzZGNjM2ExMWY1NTU3ZGYwNTU2Njk3ODc4OWM3ZDdhMjY5NGVhMzBlMGVhZmJiM2YwM2VkYmRmOTRmMzY4ZDA3ZTliN2YxNThmN2Q4NGEyMDQ1ZTFjNjA4YzVmYzZjMzhlMDJkZjBiOTMxYTBjNjVlNDdhODlmMmI=",
+    "lastLiquibaseTimestamp": 1646229478000
+  }
+}

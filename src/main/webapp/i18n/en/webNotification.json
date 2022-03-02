@@ -1,0 +1,35 @@
+{
+  "championApp": {
+    "webNotification": {
+      "home": {
+        "title": "Web Notifications",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Web Notification",
+        "createOrEditLabel": "Create or edit a Web Notification",
+        "notFound": "No Web Notifications found"
+      },
+      "created": "A new Web Notification is created with identifier {{ param }}",
+      "updated": "A Web Notification is updated with identifier {{ param }}",
+      "deleted": "A Web Notification is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Web Notification {{ id }}?"
+      },
+      "detail": {
+        "title": "Web Notification"
+      },
+      "id": "ID",
+      "status": "Status",
+      "requestPayload": "Request Payload",
+      "updatedOn": "Updated On",
+      "updatedBy": "Updated By",
+      "closedOn": "Closed On",
+      "closedBy": "Closed By",
+      "webNotificationType": "Web Notification Type",
+      "champion": "Champion",
+      "help": {
+        "updatedBy": "Email of user from account service",
+        "closedBy": "Email of user from account service"
+      }
+    }
+  }
+}

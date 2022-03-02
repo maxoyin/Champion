@@ -1,0 +1,34 @@
+{
+  "championApp": {
+    "fieldAgent": {
+      "home": {
+        "title": "FieldAgents",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Field Agent",
+        "createOrEditLabel": "Créer ou éditer un Field Agent",
+        "notFound": "Aucun Field Agent trouvé"
+      },
+      "created": "Un nouveau Field Agent a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Field Agent avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Field Agent avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Field Agent {{ id }} ?"
+      },
+      "detail": {
+        "title": "Field Agent"
+      },
+      "id": "ID",
+      "accountId": "Account Id",
+      "cityId": "City Id",
+      "stateId": "State Id",
+      "updatedOn": "Updated On",
+      "incident": "Incident",
+      "workshift": "Workshift",
+      "help": {
+        "accountId": "Email of agent",
+        "cityId": "Shared resource",
+        "stateId": "Shared resource"
+      }
+    }
+  }
+}

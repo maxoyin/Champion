@@ -1,0 +1,78 @@
+{
+  "championApp": {
+    "champion": {
+      "home": {
+        "title": "Champions",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Champion",
+        "createOrEditLabel": "Créer ou éditer un Champion",
+        "notFound": "Aucun Champion trouvé"
+      },
+      "created": "Un nouveau Champion a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Champion avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Champion avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Champion {{ id }} ?"
+      },
+      "detail": {
+        "title": "Champion"
+      },
+      "id": "ID",
+      "maxChampionId": "Max Champion Id",
+      "prospectiveId": "Prospective Id",
+      "account": "Account",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "middleName": "Middle Name",
+      "phoneNumber": "Phone Number",
+      "status": "Status",
+      "city": "City",
+      "emailAddress": "Email Address",
+      "hasInsurance": "Has Insurance",
+      "hasDriverLicense": "Has Driver License",
+      "createdOn": "Created On",
+      "activatedOn": "Activated On",
+      "updatedOn": "Updated On",
+      "welfareAnalyst": "Welfare Analyst",
+      "maritalStatus": "Marital Status",
+      "stateOfOrigin": "State Of Origin",
+      "stateOfBirth": "State Of Birth",
+      "bankName": "Bank Name",
+      "bankAccountNumber": "Bank Account Number",
+      "bankAccountName": "Bank Account Name",
+      "neatOfKinName": "Neat Of Kin Name",
+      "nextOfKinPhone": "Next Of Kin Phone",
+      "dateOfBirth": "Date Of Birth",
+      "bvn": "Bvn",
+      "houseAddress": "House Address",
+      "emergencyContactName": "Emergency Contact Name",
+      "emergencyContactNumber": "Emergency Contact Number",
+      "entryChannel": "Entry Channel",
+      "hmoProvider": "Hmo Provider",
+      "hmoNumber": "Hmo Number",
+      "metaJson": "Meta Json",
+      "dateEngaged": "Date Engaged",
+      "dateDisengaged": "Date Disengaged",
+      "rating": "Rating",
+      "helmetNumber": "Helmet Number",
+      "registrationNumber": "Registration Number",
+      "phoneBrand": "Phone Brand",
+      "phoneImeNumber": "Phone Ime Number",
+      "contractorId": "Contractor Id",
+      "serviceId": "Service Id",
+      "packageId": "Package Id",
+      "deliveryServiceId": "Delivery Service Id",
+      "statusId": "Status Id",
+      "reasonId": "Reason Id",
+      "championStatusHistory": "Champion Status History",
+      "championGuarantor": "Champion Guarantor",
+      "incident": "Incident",
+      "help": {
+        "prospectiveId": "generated Prospect Id eg. MAX-ID-534",
+        "account": "Unique email for the user from account service",
+        "welfareAnalyst": "Email of welfare analyst will be stored",
+        "metaJson": "Check if following properties still needed for Champion"
+      }
+    }
+  }
+}

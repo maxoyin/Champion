@@ -1,0 +1,31 @@
+{
+  "championApp": {
+    "championGuarantor": {
+      "home": {
+        "title": "Champion Guarantors",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Champion Guarantor",
+        "createOrEditLabel": "Create or edit a Champion Guarantor",
+        "notFound": "No Champion Guarantors found"
+      },
+      "created": "A new Champion Guarantor is created with identifier {{ param }}",
+      "updated": "A Champion Guarantor is updated with identifier {{ param }}",
+      "deleted": "A Champion Guarantor is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Champion Guarantor {{ id }}?"
+      },
+      "detail": {
+        "title": "Champion Guarantor"
+      },
+      "id": "ID",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phoneNumber": "Phone Number",
+      "address": "Address",
+      "status": "Status",
+      "occupation": "Occupation",
+      "updatedOn": "Updated On",
+      "champion": "Champion"
+    }
+  }
+}

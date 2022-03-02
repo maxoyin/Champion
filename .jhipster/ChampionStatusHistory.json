@@ -1,0 +1,57 @@
+{
+  "name": "ChampionStatusHistory",
+  "fields": [
+    {
+      "fieldName": "status",
+      "fieldType": "ChampionStatus",
+      "fieldValues": "ACTIVE,INACTIVE,CHURNED,DEACTIVATED,HPCOMPLETE",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "statusEndedOn",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "comments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "inactiveStartDate",
+      "fieldType": "LocalDate",
+      "javadoc": "Start of Inactive days captured when status changed to inactive"
+    },
+    {
+      "fieldName": "inactiveEndDate",
+      "fieldType": "LocalDate",
+      "javadoc": "End of Inactive days captured when status changed to inactive"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "championStatusChangeReason",
+      "otherEntityRelationshipName": "championStatusHistory",
+      "relationshipName": "championStatusChangeReason",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "champion",
+      "otherEntityRelationshipName": "championStatusHistory",
+      "relationshipName": "champion",
+      "otherEntityField": "maxChampionId"
+    }
+  ],
+  "javadoc": "Reason is in many to one mapping",
+  "entityTableName": "champion_status_history",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["champion"],
+  "databaseType": "sql",
+  "changelogDate": "20220302134958"
+}
